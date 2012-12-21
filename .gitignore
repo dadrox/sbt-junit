@@ -1,0 +1,23 @@
+# maven generated
+target
+
+# eclipse
+.eclipse
+.project
+.settings
+.classpath
+.scala_dependencies
+
+# vim swap and backups
+*.swp
+*~
+
+# sbt generated
+project/
+
+# other gitignore files (there can be only one)
+.gitignore
+
+# other
+.cache
+local/
