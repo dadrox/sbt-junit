@@ -2,13 +2,13 @@
 
 This is an implementation of the testing-interface for SBT, that focuses on making junit test output useful.
 
-Most output is suppressed, and more can enabled, if desired.
+Most output is suppressed, and more can be enabled, if desired.
 
 ## Usage
 
 ### Dependency
 
-Add `"com.dadrox" %% "sbt-junit" % "0.1" % "test"` to your dependencies.
+Add `"com.dadrox" % "sbt-junit" % "0.2" % "test"` to your dependencies.
 
 ### Add to your build 
 
@@ -29,6 +29,12 @@ System properties can be used to enable settings for specific contexts, such as 
 test-only and test-quick allow you to provide test options on the fly:
 
     > sbt "test-only [test suite pattern] -- -ts -vss"
+
+    sbt> test-quick [test suite pattern] -- -vts
+
+To see your printlns in your tests and code:
+
+    > sbt "test-only [test suite pattern] -- -vo"
 
     sbt> test-quick [test suite pattern] -- -vo
 
@@ -60,15 +66,7 @@ test-only and test-quick allow you to provide test options on the fly:
 
 ## Compatibility
 
-Should work with the following scala versions:
-
- * 2.9.x
- * 2.10.x
- 
-Should work with the following SBT versions:
-
- * 0.11.x
- * 0.12.x
+Now implemented in Java, so should work with all version of Scala and SBT.
 
 ## Known Issues
 
