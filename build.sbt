@@ -2,12 +2,14 @@ name := "sbt-junit"
 
 organization := "com.dadrox"
 
-version := "0.1"
+version := "0.2"
 
 libraryDependencies += "junit" % "junit-dep" % "4.10"
 
 libraryDependencies += "org.scala-tools.testing" % "test-interface" % "0.5"
 
-crossScalaVersions := Seq("2.9.1", "2.9.3-RC1", "2.10.0-RC5", "2.9.2")
+crossPaths := false
 
-scalaVersion := "2.9.2"
+autoScalaLibrary := false
+
+javacOptions in compile ++= List("-target", "1.5", "-source", "1.5")
