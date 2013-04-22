@@ -36,7 +36,7 @@ To see your printlns in your tests and code:
 
     > sbt "test-only [test suite pattern] -- -vo"
 
-    sbt> test-quick [test suite pattern] -- -vo
+    sbt> test-only [test suite pattern] -- -vo
 
 ### Options
     
