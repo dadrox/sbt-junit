@@ -4,17 +4,17 @@ public class Config {
     public boolean colorsEnabled;
     public boolean outputEnabled;
     public boolean verboseTraces;
-    public boolean shortTraces;
+    public boolean disableTraces;
     public boolean testStart;
     public boolean testPass;
     public boolean suiteStart;
 
-    public Config(boolean colorsEnabled, boolean outputEnabled, boolean verboseTraces, boolean shortTraces, boolean testStart, boolean testPass,
+    public Config(boolean colorsEnabled, boolean outputEnabled, boolean verboseTraces, boolean disableTraces, boolean testStart, boolean testPass,
                     boolean suiteStart) {
         this.colorsEnabled = colorsEnabled;
         this.outputEnabled = outputEnabled;
         this.verboseTraces = verboseTraces;
-        this.shortTraces = shortTraces;
+        this.disableTraces = disableTraces;
         this.testStart = testStart;
         this.testPass = testPass;
         this.suiteStart = suiteStart;
@@ -22,8 +22,8 @@ public class Config {
 
     @Override
     public String toString() {
-        return "Config [colorsEnabled=" + colorsEnabled + ", outputEnabled=" + outputEnabled + ", verboseTraces=" + verboseTraces + ", shortTraces="
-                        + shortTraces + ", testStart=" + testStart + ", testPass=" + testPass + ", suiteStart=" + suiteStart + "]";
+        return "Config [colorsEnabled=" + colorsEnabled + ", outputEnabled=" + outputEnabled + ", verboseTraces=" + verboseTraces + ", disableTraces="
+                        + disableTraces + ", testStart=" + testStart + ", testPass=" + testPass + ", suiteStart=" + suiteStart + "]";
     }
 
 

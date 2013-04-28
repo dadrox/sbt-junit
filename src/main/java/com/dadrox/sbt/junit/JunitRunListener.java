@@ -45,7 +45,10 @@ class JunitRunListener extends RunListener {
         logger.testFailed(name);
 
         if (config.verboseTraces) logger.error(new FormattedMessage(name.fullyQualified() + " stacktrace:\n" + failure.getTrace()));
-        else if (config.shortTraces) {
+        else if (config.disableTraces) {
+            // no traces at all
+        }
+        else {
             String trimmedTrace = failure.getTrace().split("^*at sun.reflect")[0]; // ghetto
             logger.error(new FormattedMessage(name.fullyQualified() + " trimmed stacktrace:\n" + trimmedTrace));
         }

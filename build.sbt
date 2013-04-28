@@ -2,7 +2,7 @@ name := "sbt-junit"
 
 organization := "com.dadrox"
 
-version := "0.2"
+version := "0.3"
 
 libraryDependencies += "junit" % "junit-dep" % "4.10"
 

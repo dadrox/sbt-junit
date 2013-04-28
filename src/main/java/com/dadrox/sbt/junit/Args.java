@@ -34,9 +34,9 @@ public class Args {
                         new ExistentialSystemProperty("sbt.reports.traces.verbose", false).resolve();
     }
 
-    private boolean enableShortTraces() {
-        return new ExistentialArg(list("--short-traces", "-ts"), false).resolve(args()) ||
-                        new ExistentialSystemProperty("sbt.reports.traces.short", false).resolve();
+    private boolean disableTraces() {
+        return new ExistentialArg(list("--disable-traces", "-td"), false).resolve(args()) ||
+                        new ExistentialSystemProperty("sbt.reports.traces.disable", false).resolve();
     }
 
     private boolean enableTestStart() {
@@ -59,32 +59,32 @@ public class Args {
                         !noColor(),
                         enableOutput(),
                         enableVerboseTraces(),
-                        enableShortTraces(),
+                        disableTraces(),
                         enableTestStart(),
                         enableTestPass(),
                         enableSuiteStart());
     }
 
-    private boolean argExists(String arg) {
-        for (String a : args()) {
-            if (a.equals(arg)) return true;
-        }
-        return false;
-    }
-
-    private boolean systemPropertyExists(String property) {
-        String p = System.getProperty(property);
-        if (p != null) return true;
-        return false;
-
-    }
-
-    private boolean systemPropertyConfig(String property, String value) {
-        String p = System.getProperty(property);
-        if (p != null) {
-            if (p.equals(property)) return true;
-            return false;
-        }
-        return false;
-    }
+//    private boolean argExists(String arg) {
+//        for (String a : args()) {
+//            if (a.equals(arg)) return true;
+//        }
+//        return false;
+//    }
+//
+//    private boolean systemPropertyExists(String property) {
+//        String p = System.getProperty(property);
+//        if (p != null) return true;
+//        return false;
+//
+//    }
+//
+//    private boolean systemPropertyConfig(String property, String value) {
+//        String p = System.getProperty(property);
+//        if (p != null) {
+//            if (p.equals(property)) return true;
+//            return false;
+//        }
+//        return false;
+//    }
 }

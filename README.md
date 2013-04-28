@@ -4,6 +4,8 @@ This is an implementation of the testing-interface for SBT, that focuses on maki
 
 Most output is suppressed, and more can be enabled, if desired.
 
+Short stack traces for test failures are enabled by default.
+
 ## Usage
 
 ### Dependency
@@ -28,12 +30,14 @@ System properties can be used to enable settings for specific contexts, such as 
 
 test-only and test-quick allow you to provide test options on the fly:
 
-    > sbt "test-only [test suite pattern] -- -ts -vss"
+    > sbt "test-only [test suite pattern] -- -td -vss"
 
     sbt> test-quick [test suite pattern] -- -vts
 
 To see your printlns in your tests and code:
 
+    > sbt "test-only -- -vo" // runs all tests
+    
     > sbt "test-only [test suite pattern] -- -vo"
 
     sbt> test-only [test suite pattern] -- -vo
@@ -52,7 +56,7 @@ To see your printlns in your tests and code:
     --verbose-traces       -tv     -Dsbt.reports.traces.verbose=
       Log full test failure stacktraces at error level.
       
-    --short-traces         -ts     -Dsbt.reports.traces.short=
+    --disable-traces       -td     -Dsbt.reports.traces.disable=
         Log shortened test failure stacktraces at error level.
         
     --verbose-test-start   -vts    -Dsbt.reports.verbose.test.start=
