@@ -10,7 +10,7 @@ Short stack traces for test failures are enabled by default.
 
 ### Dependency
 
-Add `"com.dadrox" % "sbt-junit" % "0.3" % "test"` to your dependencies.
+Add `"com.dadrox" % "sbt-junit" % "0.3.1" % "test"` to your dependencies.
 
 ### Add to your build 
 

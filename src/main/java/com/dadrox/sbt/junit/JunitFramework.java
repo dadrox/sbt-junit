@@ -34,8 +34,6 @@ public class JunitFramework implements Framework {
 
     @Override
     public String name() {
-        System.out.println("Someone get name!");
-
         return "Junit";
     }
 

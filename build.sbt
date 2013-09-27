@@ -2,11 +2,11 @@ name := "sbt-junit"
 
 organization := "com.dadrox"
 
-version := "0.3"
+version := "0.3.1"
 
 libraryDependencies += "junit" % "junit-dep" % "4.10"
 
-libraryDependencies += "org.scala-tools.testing" % "test-interface" % "0.5"
+libraryDependencies += "org.scala-sbt" % "test-interface" % "1.0"
 
 crossPaths := false
 
